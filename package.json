@@ -1,0 +1,44 @@
+{
+    "name": "ut-port-infosys",
+    "version": "0.0.1",
+    "main": "index.js",
+    "dependencies": {
+        "ut-function.template": "^1.6.3"
+    },
+    "peerDependencies": {
+        "ut-port-http": "^8.9.3"
+    },
+    "devDependencies": {
+        "tap": "^16.0.1",
+        "ut-port-script": "^7.2.0",
+        "ut-port-http": "^8.9.3",
+        "ut-run": "^10.68.0",
+        "ut-tools": "^6.40.7",
+        "why-is-node-running": "^2.2.0"
+    },
+    "scripts": {
+        "lint": "ut-lint .",
+        "release": "ut-release",
+        "changelog": "ut-changelog",
+        "check": "ut-check",
+        "cover": "ut-cover-parallel",
+        "lint-js": "ut-lint-js .",
+        "postpublish": "ut-postpublish",
+        "postversion": "ut-postversion",
+        "precommit": "ut-precommit",
+        "precover": "ut-precover",
+        "prepublish": "ut-prepublish",
+        "prepush": "ut-prepush",
+        "pretest": "ut-pretest",
+        "preversion": "ut-preversion",
+        "test": "ut-test-parallel",
+        "version": "ut-version",
+        "jenkins": "ut-jenkins",
+        "gitlab": "ut-gitlab"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:softwaregroup-bg/ut-port-infosys.git"
+    },
+    "license": "Apache-2.0"
+}
