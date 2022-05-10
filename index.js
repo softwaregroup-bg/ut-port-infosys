@@ -8,23 +8,32 @@ module.exports = (...params) => class infosys extends require('ut-port-http')(..
 
     handlers() {
         return {
-            'drainSend.event.receive'(msg, $meta) {
+            'drainSend.event.receive'({length}, $meta) {
                 $meta.mtid = 'notification';
                 $meta.method = 'notice.message.process';
                 return {
                     port: this.config.id,
                     method: this.config.namespace + '.exec',
-                    length: msg.length
+                    length: length
                 };
             },
-            [`${this.config.namespace}.exec.request.send`]: (msg, $meta) => {
+            [`${this.config.namespace}.exec.request.send`]: ({
+                body,
+                messageId,
+                to,
+                sid = 11,
+                channel = 'sms' // sms or viber
+            }, $meta) => {
                 return {
-                    payload: {
-                        from: msg.from,
-                        to: msg.to,
-                        text: msg.body
-                    },
-                    json: true
+                    qs: {
+                        sid,
+                        validity: 1440,
+                        priority: 2,
+                        id: messageId,
+                        msisdn: to,
+                        channel,
+                        text: body
+                    }
                 };
             },
             receive: (msg, $meta) => {
