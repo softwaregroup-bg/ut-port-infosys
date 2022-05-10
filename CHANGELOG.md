@@ -1,3 +1,14 @@
+# 0.1.0 (2022-05-10)
+
+
+### Features
+
+* init utcore-125 ([060e365](https://github.com/softwaregroup-bg/ut-port-infosys/commit/060e3655a5650776105b697aaf4368f3c39922a4))
+* qs utcore-125 ([a51680f](https://github.com/softwaregroup-bg/ut-port-infosys/commit/a51680f1fa3a0af5de67e7101583677d5c3ec62c))
+* qs utcore-125 ([22ee991](https://github.com/softwaregroup-bg/ut-port-infosys/commit/22ee991bc13b1dbafb7936ec6b51326223bfd65e))
+
+
+
 ## [1.4.1](https://github.com/softwaregroup-bg/ut-port-infobip/compare/v1.4.0...v1.4.1) (2020-10-02)
 
 
