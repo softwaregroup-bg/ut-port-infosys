@@ -22,8 +22,10 @@ and then call it with
 
 ```js
 await importMethod('infosys.send')({
-    from: '',
-    to: '',
-    text: ''
+    body,
+    messageId,
+    to,
+    sid = 11,
+    channel = 'sms' // sms or viber
 });
 ```
