@@ -21,19 +21,24 @@ module.exports = (...params) => class infosys extends require('ut-port-http')(..
                 body,
                 messageId,
                 to,
-                sid = 11,
-                channel = 'sms' // sms or viber
+                cid = 11,
+                sid = 11
             }, $meta) => {
                 return {
-                    qs: {
+                    payload: {
+                        cid,
                         sid,
                         validity: 1440,
                         priority: 2,
                         id: messageId,
-                        msisdn: to,
-                        channel,
-                        text: body
-                    }
+                        recipient: {
+                            msisdn: to
+                        },
+                        message: {
+                            sms: {text: body}
+                        }
+                    },
+                    json: true
                 };
             },
             receive: (msg, $meta) => {

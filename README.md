@@ -9,7 +9,7 @@ Sending SMS with infosys system.
         "logLevel": "error",
         "url": "proto://gatewayIp:port",
         "uri": "/sms/2/text/single",
-        "method": "GET",
+        "method": "POST",
         "raw": {
             "headers": {
                 "Authorization": "Basic base64(string)"
@@ -24,8 +24,6 @@ and then call it with
 await importMethod('infosys.send')({
     body,
     messageId,
-    to,
-    sid = 11,
-    channel = 'sms' // sms or viber
+    to
 });
 ```
