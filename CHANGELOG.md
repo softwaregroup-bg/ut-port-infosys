@@ -1,3 +1,12 @@
+## [0.1.1](https://github.com/softwaregroup-bg/ut-port-infosys/compare/v0.1.0...v0.1.1) (2022-05-11)
+
+
+### Bug Fixes
+
+* infosys utcore-125 ([3c2f271](https://github.com/softwaregroup-bg/ut-port-infosys/commit/3c2f2717e11b0f28a591a34419ac57ecb8a8f824))
+
+
+
 # 0.1.0 (2022-05-10)
 
 
